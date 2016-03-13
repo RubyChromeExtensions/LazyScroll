@@ -90,6 +90,9 @@ chrome.runtime.onMessage.addListener(function(msg, _, sendResponse) {
   			stopScrolling();
   			startScrolling();
   		}
+		else if(lazy_scroll.get_state() == "PAUSE"){
+			lazy_scroll.setDirection(lazy_scroll.getDirection() * -1);
+		}
   		
   	}
   	else if(msg['command'] == "increase-speed"){
