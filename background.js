@@ -1,9 +1,9 @@
 // Create a parent item and two children.
-var parent = chrome.contextMenus.create({"title": "Lazy Scroll"});
-var child1 = chrome.contextMenus.create(
-  {"title": "Toggle Scroll State", "parentId": parent, "onclick": toggle_state});
-var child2 = chrome.contextMenus.create(
-  {"title": "Reverse Direction", "parentId": parent, "onclick": reverse_direction});
+//var parent = chrome.contextMenus.create({"title": "Lazy Scroll"});
+var toggle_scroll_state = chrome.contextMenus.create(
+  {"title": "Toggle Scroll State","onclick": toggle_state});
+/*var child2 = chrome.contextMenus.create(
+  {"title": "Reverse Direction", "parentId": parent, "onclick": reverse_direction});*/
 
 
 function reverse_direction(){
